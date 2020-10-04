@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SignUpAs"
+    android:orientation="vertical"
+    android:background="@color/colorBlue100"
+    android:padding="10dp">
+    <TextView
+        android:layout_marginTop="20dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sign Up As"
+        android:textSize="40sp"
+        android:fontFamily="@font/adamina"
+        android:textColor="@color/colorPurple500"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:padding="20dp">
+        <LinearLayout
+            android:clickable="true"
+            android:id="@+id/Teacher_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/layout_curve"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_margin="20dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/teacher_icon"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TEACHER"
+                android:textSize="40sp"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/adamina"
+                android:textColor="@color/colorPurple500"/>
+
+        </LinearLayout>
+        <LinearLayout
+            android:clickable="true"
+            android:id="@+id/Student_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/layout_curve"
+            android:orientation="vertical">
+            <ImageView
+                android:layout_margin="20dp"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/student_icon"
+                android:layout_gravity="center_horizontal"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STUDENT"
+                android:textSize="40sp"
+                android:layout_gravity="center_horizontal"
+                android:fontFamily="@font/adamina"
+                android:textColor="@color/colorPurple500"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</LinearLayout>
