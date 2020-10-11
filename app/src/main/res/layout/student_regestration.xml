@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".Student_registeration"
+    android:orientation="vertical"
+    android:background="@color/colorBlue50"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_margin="10dp"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Student's:"
+        android:textColor="@color/colorPurple500"
+        android:fontFamily="@font/adamina"
+        android:textSize="40sp"
+        android:layout_gravity="start"/>
+
+    <View
+    android:id="@+id/divider"
+    android:layout_width="match_parent"
+    android:layout_height="1dp"
+    android:background="?android:attr/listDivider" />
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1. Name:"
+        android:textSize="20sp"
+        android:textColor="@color/colorPurple500"/>
+    <EditText
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/Student_name"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2. Email:"
+        android:textSize="20sp"
+        android:textColor="@color/colorPurple500"/>
+    <EditText
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/Student_email"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="3. Set Password"
+        android:textColor="@color/colorPurple500"
+        android:textSize="20sp"/>
+    <EditText
+        android:inputType="textPassword"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/Student_password"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="4. Class"
+        android:textColor="@color/colorPurple500"
+        android:textSize="20sp"/>
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@null"
+        android:background="@drawable/layout_curve"
+        android:text="Choose Class"
+        android:textColor="@color/colorPurple500"
+        android:textAlignment="viewStart"
+        android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
+        android:id="@+id/Choose_class"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="5. Phone Number"
+        android:textColor="@color/colorPurple500"
+        android:textSize="20sp"/>
+    <EditText
+        android:inputType="number"
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:id="@+id/Students_phno"/>
+    <Button
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:backgroundTint="@null"
+        android:textColor="@color/colorPurple500"
+        android:text="Done"
+        android:background="@drawable/btn_bg"
+        android:id="@+id/Stduent_Done"/>
+
+</LinearLayout>
