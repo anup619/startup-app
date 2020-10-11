@@ -36,7 +36,7 @@ public class Student_registeration extends AppCompatActivity {
         });
     }
 
-    private String showChooseClassDialog() {
+    public String showChooseClassDialog() {
         AlertDialog.Builder chosseClassDialog;
         if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP){
             chosseClassDialog = new AlertDialog.Builder(this, android.R.style.Theme_Material_Dialog_Alert);
