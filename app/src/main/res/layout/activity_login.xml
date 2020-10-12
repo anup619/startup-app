@@ -41,6 +41,13 @@
         android:paddingBottom="10dp"
             app:startIconDrawable="@drawable/ic_baseline_email_24"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+<<<<<<< HEAD
+=======
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textEmailAddress">
+>>>>>>> master
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextEmail"
@@ -49,7 +56,7 @@
 
             </com.google.android.material.textfield.TextInputEditText>
 
-    </com.google.android.material.textfield.TextInputLayout>
+        </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -63,7 +70,8 @@
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/editTextPassword"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:inputType="textPassword">
 
             </com.google.android.material.textfield.TextInputEditText>
 
@@ -78,9 +86,10 @@
 
     </LinearLayout>
     <View
+        android:id="@+id/divider"
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="#000"/>
+        android:layout_height="5dp"
+        android:background="?android:attr/listDivider" />
 
     <TextView
         android:layout_marginTop="10dp"

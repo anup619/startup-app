@@ -5,10 +5,6 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="colorBlue50">#C8FFF4</color>
     <color name="colorBlue100">#70EFDE</color>
-    <color name="colorBlue200">#03D6C1</color>
-    <color name="colorBlue300">#00C4B4</color>
-    <color name="colorBlue400">#00B3A6</color>
-    <color name="colorBlue500">#01A299</color>
     <color name="colorPurple50">#F2E7FE</color>
     <color name="colorPurple100">#DBB2FF</color>
     <color name="colorPurple200">#BB86FC</color>
