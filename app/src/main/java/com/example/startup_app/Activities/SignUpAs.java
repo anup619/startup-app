@@ -1,16 +1,16 @@
-package com.example.startup_app;
+package com.example.startup_app.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.content.ContextCompat;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
-import android.graphics.Color;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
+
+import com.example.startup_app.R;
 
 public class SignUpAs extends AppCompatActivity {
 
@@ -41,7 +41,7 @@ public class SignUpAs extends AppCompatActivity {
         teacher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SignUpAs.this, OtpActvity.class);
+                Intent intent = new Intent(SignUpAs.this, OtpActivity.class);
                 startActivity(intent);
                 finish();
             }
@@ -49,7 +49,7 @@ public class SignUpAs extends AppCompatActivity {
         student.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SignUpAs.this, OtpActvity.class);
+                Intent intent = new Intent(SignUpAs.this, OtpActivity.class);
                 startActivity(intent);
                 finish();
             }
