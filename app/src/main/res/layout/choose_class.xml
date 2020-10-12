@@ -31,30 +31,24 @@
             android:orientation="horizontal"
             android:weightSum="3">
             <Button
+                style="@style/ButtonStyle"
                 android:id="@+id/Class_5th"
-                android:background="@drawable/btn_bg"
-                app:backgroundTint="@null"
-                android:textColor="@color/colorPurple500"
                 android:layout_margin="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="5th"/>
             <Button
+                style="@style/ButtonStyle"
                 android:id="@+id/Class_6th"
-                android:background="@drawable/btn_bg"
-                app:backgroundTint="@null"
-                android:textColor="@color/colorPurple500"
                 android:layout_margin="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="6th"/>
             <Button
+                style="@style/ButtonStyle"
                 android:id="@+id/Class_7th"
-                android:background="@drawable/btn_bg"
-                app:backgroundTint="@null"
-                android:textColor="@color/colorPurple500"
                 android:layout_margin="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -67,30 +61,24 @@
             android:orientation="horizontal"
             android:weightSum="3">
             <Button
+                style="@style/ButtonStyle"
                 android:id="@+id/Class_8th"
-                android:background="@drawable/btn_bg"
-                app:backgroundTint="@null"
-                android:textColor="@color/colorPurple500"
                 android:layout_margin="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="8th"/>
             <Button
+                style="@style/ButtonStyle"
                 android:id="@+id/Class_9th"
-                android:background="@drawable/btn_bg"
-                app:backgroundTint="@null"
-                android:textColor="@color/colorPurple500"
                 android:layout_margin="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="9th"/>
             <Button
+                style="@style/ButtonStyle"
                 android:id="@+id/Class_10th"
-                android:background="@drawable/btn_bg"
-                app:backgroundTint="@null"
-                android:textColor="@color/colorPurple500"
                 android:layout_margin="10dp"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"

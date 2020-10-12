@@ -73,16 +73,14 @@
         android:textSize="20sp"/>
 
     <Button
+        style="@style/ButtonStyle"
         android:id="@+id/Choose_class"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
-        android:background="@drawable/btn_bg"
         android:drawableRight="@drawable/ic_baseline_keyboard_arrow_right_24"
         android:text="Choose Class"
-        android:textAlignment="viewStart"
-        android:textColor="@color/colorPurple500"
-        app:backgroundTint="@null" />
+        android:textAlignment="viewStart"/>
 
     <TextView
         android:layout_marginTop="10dp"
@@ -99,13 +97,11 @@
         android:id="@+id/Students_phno"/>
     <Button
         android:layout_gravity="center"
+        style="@style/ButtonStyle"
         android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:backgroundTint="@null"
-        android:textColor="@color/colorPurple500"
         android:text="Done"
-        android:background="@drawable/btn_bg"
         android:id="@+id/Stduent_Done"/>
 
 </LinearLayout>

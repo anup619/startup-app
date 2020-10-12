@@ -75,8 +75,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Go"
-            android:textSize="18sp"
-            android:elevation="10dp"/>
+            android:textSize="18sp" />
 
     </LinearLayout>
     <View
@@ -96,14 +95,11 @@
         android:textColor="#FFF"/>
 
     <Button
+        style="@style/ButtonStyle"
         android:id="@+id/btnSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Sign Up"
-        android:textSize="18sp"
-        android:elevation="10dp"
-        android:background="@drawable/layout_curve"
-        app:backgroundTint="@null"
-        android:textColor="@color/colorPurple500"/>
+        android:textSize="18sp" />
 
 </LinearLayout>
