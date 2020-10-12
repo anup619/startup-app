@@ -1,6 +1,4 @@
-package com.example.startup_app;
-
-import androidx.appcompat.app.AppCompatActivity;
+package com.example.startup_app.Activity;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
@@ -13,6 +11,10 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.startup_app.R;
 
 public class MainActivity extends AppCompatActivity {
 

@@ -1,7 +1,4 @@
-package com.example.startup_app;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
+package com.example.startup_app.Activity;
 
 import android.annotation.SuppressLint;
 import android.content.Intent;
@@ -9,6 +6,11 @@ import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
+import com.example.startup_app.R;
 
 public class SignUpAs extends AppCompatActivity {
 
