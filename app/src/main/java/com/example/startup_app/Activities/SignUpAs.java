@@ -1,14 +1,14 @@
 package com.example.startup_app.Activities;
 
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.content.ContextCompat;
 
 import com.example.startup_app.R;
 
@@ -41,11 +41,7 @@ public class SignUpAs extends AppCompatActivity {
         teacher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-<<<<<<< HEAD:app/src/main/java/com/example/startup_app/Activities/SignUpAs.java
                 Intent intent = new Intent(SignUpAs.this, OtpActivity.class);
-=======
-                Intent intent = new Intent(SignUpAs.this, Student_registeration.class);
->>>>>>> master:app/src/main/java/com/example/startup_app/SignUpAs.java
                 startActivity(intent);
                 finish();
             }
@@ -53,11 +49,7 @@ public class SignUpAs extends AppCompatActivity {
         student.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-<<<<<<< HEAD:app/src/main/java/com/example/startup_app/Activities/SignUpAs.java
                 Intent intent = new Intent(SignUpAs.this, OtpActivity.class);
-=======
-                Intent intent = new Intent(SignUpAs.this, Student_registeration.class);
->>>>>>> master:app/src/main/java/com/example/startup_app/SignUpAs.java
                 startActivity(intent);
                 finish();
             }
