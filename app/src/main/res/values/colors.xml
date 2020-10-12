@@ -11,4 +11,5 @@
     <color name="colorPurple300">#985EFF</color>
     <color name="colorPurple400">#7F39FB</color>
     <color name="colorPurple500">#6200EE</color>
+    <color name="colorWhite">#FFF</color>
 </resources>
