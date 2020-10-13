@@ -11,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".Activity.DashBoard"/>
-        <activity android:name=".Activity.Student_registeration" />
+        <activity android:name=".Activity.Student_registration" />
         <activity android:name=".Activity.SignUpAs" />
         <activity android:name=".Activity.Login" />
         <activity android:name=".Activity.MainActivity">

@@ -3,8 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".Activity.Student_registeration"
+    tools:context=".Activity.Student_registration"
     android:orientation="vertical"
     android:background="@color/colorWhite"
     android:padding="10dp">
@@ -50,7 +49,7 @@
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:id="@+id/Student_email"/>
+        android:id="@+id/editTextSignUpEmail" />
     <TextView
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
@@ -63,7 +62,7 @@
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:id="@+id/Student_password"/>
+        android:id="@+id/editTextSignUpPassword"/>
     <TextView
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
@@ -90,18 +89,19 @@
         android:textColor="@color/colorPurple500"
         android:textSize="20sp"/>
     <EditText
-        android:inputType="number"
+        android:inputType="phone"
         android:layout_marginTop="10dp"
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:id="@+id/Students_phno"/>
+
     <Button
-        android:layout_gravity="center"
+        android:id="@+id/btnSignUp"
         style="@style/ButtonStyle"
-        android:layout_marginTop="10dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Done"
-        android:id="@+id/Stduent_Done"/>
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Done" />
 
 </LinearLayout>

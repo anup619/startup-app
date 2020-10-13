@@ -41,7 +41,7 @@ public class SignUpAs extends AppCompatActivity {
         teacher.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SignUpAs.this, Student_registeration.class);
+                Intent intent = new Intent(SignUpAs.this, Student_registration.class);
                 startActivity(intent);
                 finish();
             }
@@ -49,7 +49,7 @@ public class SignUpAs extends AppCompatActivity {
         student.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(SignUpAs.this, Student_registeration.class);
+                Intent intent = new Intent(SignUpAs.this, Student_registration.class);
                 startActivity(intent);
                 finish();
             }
