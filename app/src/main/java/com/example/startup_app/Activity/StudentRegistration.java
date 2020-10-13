@@ -19,7 +19,7 @@ import com.example.startup_app.Core.Registration.RegistrationContract;
 import com.example.startup_app.Core.Registration.RegistrationPresenter;
 import com.example.startup_app.R;
 
-public class Student_registration extends AppCompatActivity implements RegistrationContract.View {
+public class StudentRegistration extends AppCompatActivity implements RegistrationContract.View {
 
     EditText students_name, students_email, students_password, students_phno;
     Button done, choose_class;
@@ -177,7 +177,7 @@ public class Student_registration extends AppCompatActivity implements Registrat
 
     private void initRegistration(String email, String password, String name, String phoneNumber, String grade) {
         mRegistrationPresenter.register(this,email,password,name,phoneNumber,grade);
-        startActivity(new Intent(Student_registration.this,Login.class));
+        startActivity(new Intent(StudentRegistration.this,Login.class));
     }
 
 }
