@@ -1,30 +1,41 @@
 package com.example.startup_app.Activity;
 
-import android.content.DialogInterface;
-import android.mtp.MtpConstants;
+import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.text.TextUtils;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.Window;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.startup_app.Core.Registration.RegistrationContract;
+import com.example.startup_app.Core.Registration.RegistrationPresenter;
 import com.example.startup_app.R;
 
-public class TeacherRegistration extends AppCompatActivity {
+public class TeacherRegistration extends AppCompatActivity implements RegistrationContract.View {
     EditText teachers_name, teachers_email, teachers_password, teachers_phno;
     Button done, choose_subject,ok,cancel;
     Boolean Maths,Science,English,all;
     CheckBox subject_maths,subject_science,subject_english,subject_all;
+    private RegistrationPresenter mRegistrationPresenter;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_teacher_registration);
+        setContentView(R.layout.teacher_registration);
+        initViews();
+
+
+    }
+
+    private void initViews() {
         teachers_name = findViewById(R.id.Teacher_name);
         teachers_email = findViewById(R.id.Teacher_email);
         teachers_password = findViewById(R.id.Teacher_password);
@@ -39,6 +50,34 @@ public class TeacherRegistration extends AppCompatActivity {
             }
         });
 
+        mRegistrationPresenter = new RegistrationPresenter(this);
+        done.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                validateDetails();
+            }
+        });
+    }
+
+    private void validateDetails() {
+        if(TextUtils.isEmpty(teachers_email.getText().toString())){
+            teachers_email.setError("Email cannot be empty");
+        }else if(TextUtils.isEmpty(teachers_password.getText().toString())){
+            teachers_password.setError("Password cannot be empty");
+        }else if(TextUtils.isEmpty(teachers_name.getText().toString())){
+            teachers_name.setError("name cannot be empty");
+        }else if(TextUtils.isEmpty(teachers_phno.getText().toString())){
+            teachers_phno.setError("Phone Number cannot be empty");
+        }else if(TextUtils.equals(choose_subject.getText().toString(),"Choose Class")){
+            choose_subject.setError("Select your class");
+        }else{
+            initTeacherRegistration(teachers_email.getText().toString(), teachers_password.getText().toString(), teachers_name.getText().toString(), teachers_phno.getText().toString(), choose_subject.getText().toString());
+        }
+    }
+
+    private void initTeacherRegistration(String email, String password, String name, String phoneNumber, String subjects) {
+        mRegistrationPresenter.registerTeacher(this,email,password,name,phoneNumber,subjects);
+        startActivity(new Intent(TeacherRegistration.this,Login.class));
     }
 
     private void ChooseSubjectDialog() {
@@ -146,5 +185,16 @@ public class TeacherRegistration extends AppCompatActivity {
                 dialog.dismiss();
             }
         });
+    }
+
+    @Override
+    public void onRegistrationSuccess(String message) {
+        Log.d("TAG","task.getResult().toString()");
+        Toast.makeText(getApplicationContext(), "Successfully Registered" , Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    public void onRegistrationFailure(String message) {
+        Toast.makeText(getApplicationContext(),message , Toast.LENGTH_SHORT).show();
     }
 }

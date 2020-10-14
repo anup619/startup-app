@@ -13,8 +13,13 @@ public class RegistrationPresenter implements RegistrationContract.Presenter, Re
     }
 
     @Override
-    public void register(Activity activity, String email, String password, String name, String phoneNumber, String grade) {
-        mRegisterInteractor.performFirebaseRegister(activity, email, password, name, phoneNumber, grade);
+    public void registerStudent(Activity activity, String email, String password, String name, String phoneNumber, String grade) {
+        mRegisterInteractor.performFirebaseStudentRegister(activity, email, password, name, phoneNumber, grade);
+    }
+
+    @Override
+    public void registerTeacher(Activity activity, String email, String password, String name, String phoneNumber, String subjects) {
+        mRegisterInteractor.performFirebaseTeacherRegister(activity, email, password, name, phoneNumber, subjects);
     }
 
     @Override

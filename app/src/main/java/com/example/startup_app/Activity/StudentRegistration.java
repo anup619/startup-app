@@ -171,12 +171,12 @@ public class StudentRegistration extends AppCompatActivity implements Registrati
         }else if(TextUtils.equals(choose_class.getText().toString(),"Choose Class")){
             choose_class.setError("Select your class");
         }else{
-            initRegistration(students_email.getText().toString(), students_password.getText().toString(), students_name.getText().toString(), students_phno.getText().toString(), choose_class.getText().toString());
+            initStudentRegistration(students_email.getText().toString(), students_password.getText().toString(), students_name.getText().toString(), students_phno.getText().toString(), choose_class.getText().toString());
         }
     }
 
-    private void initRegistration(String email, String password, String name, String phoneNumber, String grade) {
-        mRegistrationPresenter.register(this,email,password,name,phoneNumber,grade);
+    private void initStudentRegistration(String email, String password, String name, String phoneNumber, String grade) {
+        mRegistrationPresenter.registerStudent(this,email,password,name,phoneNumber,grade);
         startActivity(new Intent(StudentRegistration.this,Login.class));
     }
 

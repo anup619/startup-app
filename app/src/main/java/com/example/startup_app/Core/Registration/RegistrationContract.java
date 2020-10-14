@@ -10,11 +10,13 @@ public interface RegistrationContract {
     }
 
     interface Presenter{
-        void register(Activity activity, String email, String password, String name, String phoneNumber, String grade);
+        void registerStudent(Activity activity, String email, String password, String name, String phoneNumber, String grade);
+        void registerTeacher(Activity activity, String email, String password, String name, String phoneNumber, String subjects);
     }
 
     interface Intractor{
-        void performFirebaseRegister(Activity activity, String email, String password, String name, String phoneNumber, String grade);
+        void performFirebaseStudentRegister(Activity activity, String email, String password, String name, String phoneNumber, String grade);
+        void performFirebaseTeacherRegister(Activity activity, String email, String password, String name, String phoneNumber, String subjects);
     }
 
     interface onRegistrationListener{
