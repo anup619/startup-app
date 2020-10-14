@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/layout_curve">
+    <TextView
+        android:layout_margin="10dp"
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Choose Subject:"
+        android:textColor="@color/colorPurple500"
+        android:fontFamily="@font/adamina"
+        android:textSize="35sp"
+        android:layout_gravity="start"/>
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="?android:attr/listDivider" />
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:elevation="5dp"
+        app:cardCornerRadius="2dp">
+        <LinearLayout
+            android:padding="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="2">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:weightSum="2">
+            <CheckBox
+                android:id="@+id/Subject_Maths"
+                style="@style/ButtonStyle"
+                android:text="Maths"
+                android:background="@drawable/checkbox_selection"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+            <CheckBox
+                android:id="@+id/Subject_English"
+                style="@style/ButtonStyle"
+                android:text="English"
+                android:background="@drawable/checkbox_selection"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_weight="1"
+                android:weightSum="2">
+                <CheckBox
+                    android:id="@+id/Subject_Science"
+                    style="@style/ButtonStyle"
+                    android:text="Science"
+                    android:background="@drawable/checkbox_selection"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+                <CheckBox
+                    android:id="@+id/Subject_ALL"
+                    style="@style/ButtonStyle"
+                    android:text="All"
+                    android:background="@drawable/checkbox_selection"
+                    android:layout_margin="5dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+    <LinearLayout
+        android:padding="5dp"
+        android:weightSum="2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <Button
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:id="@+id/Choose_Subjects_cancel"
+            android:background="@android:color/transparent"
+            android:textColor="@color/colorPurple500"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Cancel" />
+        <Button
+            android:background="@android:color/transparent"
+            android:textColor="@color/colorPurple500"
+            android:layout_weight="1"
+            android:layout_margin="5dp"
+            android:id="@+id/Choose_Subjects_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Ok" />
+
+    </LinearLayout>
+
+</LinearLayout>

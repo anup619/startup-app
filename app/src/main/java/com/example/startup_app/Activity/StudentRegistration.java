@@ -62,19 +62,19 @@ public class StudentRegistration extends AppCompatActivity implements Registrati
     }
 
     public String showChooseClassDialog() {
-        AlertDialog.Builder chosseClassDialog;
+        AlertDialog.Builder chooseClassDialog;
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            chosseClassDialog = new AlertDialog.Builder(this, android.R.style.Theme_Material_Dialog_Alert);
+            chooseClassDialog = new AlertDialog.Builder(this, android.R.style.Theme_Material_Dialog_Alert);
         } else {
-            chosseClassDialog = new AlertDialog.Builder(this);
+            chooseClassDialog = new AlertDialog.Builder(this);
         }
 
         LayoutInflater inflater = getLayoutInflater();
         View view = inflater.inflate(R.layout.choose_class, null);
 
-        chosseClassDialog.setView(view);
-        chosseClassDialog.setCancelable(false);
-        final AlertDialog dialog = chosseClassDialog.create();
+        chooseClassDialog.setView(view);
+        chooseClassDialog.setCancelable(false);
+        final AlertDialog dialog = chooseClassDialog.create();
         dialog.getWindow().requestFeature(Window.FEATURE_NO_TITLE);
         dialog.show();
 
