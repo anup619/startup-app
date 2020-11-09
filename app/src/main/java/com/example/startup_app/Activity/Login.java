@@ -83,7 +83,7 @@ public class Login extends AppCompatActivity implements LoginContract.View, View
     public void onLoginSuccess(String message) {
         Log.d("TAG","task.getResult().toString()");
         Toast.makeText(getApplicationContext(), "Successfully Logged in" , Toast.LENGTH_SHORT).show();
-    }
+        startActivity(new Intent(getApplicationContext(),DashBoard.class));  }
 
     @Override
     public void onLoginFailure(String message) {
