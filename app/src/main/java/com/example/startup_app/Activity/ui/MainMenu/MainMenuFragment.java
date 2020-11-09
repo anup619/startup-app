@@ -1,4 +1,4 @@
-package com.example.startup_app.Activity.ui.home;
+package com.example.startup_app.Activity.ui.MainMenu;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -14,15 +14,15 @@ import androidx.lifecycle.ViewModelProviders;
 
 import com.example.startup_app.R;
 
-public class HomeFragment extends Fragment {
+public class MainMenuFragment extends Fragment {
 
-    private com.example.myapplication.ui.home.HomeViewModel homeViewModel;
+    private MainMenuViewModel homeViewModel;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
         homeViewModel =
-                ViewModelProviders.of(this).get(com.example.myapplication.ui.home.HomeViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_home, container, false);
+                ViewModelProviders.of(this).get(MainMenuViewModel.class);
+        View root = inflater.inflate(R.layout.fragment_main_menu, container, false);
         final TextView textView = root.findViewById(R.id.text_home);
         homeViewModel.getText().observe(getViewLifecycleOwner(), new Observer<String>() {
             @Override
