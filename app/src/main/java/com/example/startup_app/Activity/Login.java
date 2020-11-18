@@ -14,11 +14,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.example.startup_app.Core.Login.LoginContract;
 import com.example.startup_app.Core.Login.LoginPresenter;
 import com.example.startup_app.R;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Login extends AppCompatActivity implements LoginContract.View, View.OnClickListener {
 
-    Button signup_btn,login_go_btn;
-    EditText editTextEmail,editTextPassword;
+    Button signup_btn, login_go_btn;
+    EditText editTextEmail, editTextPassword;
     private LoginPresenter mLoginPresenter;
 
 
@@ -32,13 +34,13 @@ public class Login extends AppCompatActivity implements LoginContract.View, View
 
     private void initViews() {
 
-        Toast.makeText(getApplicationContext(), "Internet Required" , Toast.LENGTH_SHORT).show();
-        login_go_btn = (Button)findViewById(R.id.btnLogin);
+        Toast.makeText(getApplicationContext(), "Internet Required", Toast.LENGTH_SHORT).show();
+        login_go_btn = (Button) findViewById(R.id.btnLogin);
         login_go_btn.setOnClickListener(this);
         signup_btn = (Button) findViewById(R.id.btnSignUp);
         signup_btn.setOnClickListener(this);
-        editTextEmail = (EditText)findViewById(R.id.editTextEmail);
-        editTextPassword = (EditText)findViewById(R.id.editTextPassword);
+        editTextEmail = (EditText) findViewById(R.id.editTextEmail);
+        editTextPassword = (EditText) findViewById(R.id.editTextPassword);
 
         mLoginPresenter = new LoginPresenter(this);
 
@@ -46,7 +48,7 @@ public class Login extends AppCompatActivity implements LoginContract.View, View
 
     @Override
     public void onClick(View view) {
-        switch (view.getId()){
+        switch (view.getId()) {
             case R.id.btnLogin:
                 checkLoginDetails();
                 break;
@@ -62,12 +64,13 @@ public class Login extends AppCompatActivity implements LoginContract.View, View
     }
 
     private void checkLoginDetails() {
-        if(!TextUtils.isEmpty(editTextEmail.getText().toString()) && !TextUtils.isEmpty(editTextPassword.getText().toString())){
+        if (!TextUtils.isEmpty(editTextEmail.getText().toString()) && !TextUtils.isEmpty(editTextPassword.getText().toString())) {
             initLogin(editTextEmail.getText().toString(), editTextPassword.getText().toString());
-        }else{
-            if(TextUtils.isEmpty(editTextEmail.getText().toString())){
+        } else {
+            if (TextUtils.isEmpty(editTextEmail.getText().toString())) {
                 editTextEmail.setError("Please enter a valid email");
-            }if(TextUtils.isEmpty(editTextPassword.getText().toString())){
+            }
+            if (TextUtils.isEmpty(editTextPassword.getText().toString())) {
                 editTextPassword.setError("Please enter password");
             }
         }
@@ -78,15 +81,28 @@ public class Login extends AppCompatActivity implements LoginContract.View, View
     }
 
 
-
     @Override
     public void onLoginSuccess(String message) {
-        Log.d("TAG","task.getResult().toString()");
-        Toast.makeText(getApplicationContext(), "Successfully Logged in" , Toast.LENGTH_SHORT).show();
-        startActivity(new Intent(getApplicationContext(),DashBoard.class));  }
+        Log.d("TAG", "task.getResult().toString()");
+        Toast.makeText(getApplicationContext(), "Successfully Logged in", Toast.LENGTH_SHORT).show();
+        startActivity(new Intent(getApplicationContext(), DashBoard.class));
+    }
 
     @Override
     public void onLoginFailure(String message) {
-        Toast.makeText(getApplicationContext(),message , Toast.LENGTH_SHORT).show();
+        Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+    }
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
+        if (user != null) {
+            //User is Logged in
+            startActivity(new Intent(Login.this, DashBoard.class));
+
+        } else {
+            //No User is Logged in
+        }
     }
 }
